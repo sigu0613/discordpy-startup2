@@ -87,7 +87,7 @@ async def r(ctx, room_id = "-1"):
 		await ctx.message.delete()
 		
 @bot.command()
-async def s(ctx, room_id = "-1", title = "", max_user = 2, remain_time = 300):
+async def t(ctx, room_id = "-1", title = "", max_user = 2, remain_time = 300):
 	users_str = "{}".format(ctx.message.author.name)
 	if(ctx.message.author.nick != None):
 		users_str = "{}".format(ctx.message.author.nick)
