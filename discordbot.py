@@ -70,7 +70,7 @@ async def on_reaction_add(reaction, user):
 			recruit_message[message.id]["raw_message"] = message
 
 @bot.command()
-async def r(ctx, room_id = "-1"):
+async def r_test(ctx, room_id = "-1"):
 	sender_id = ctx.message.author.id
 	if(sender_id in lastest_recruit_data):
 		title = lastest_recruit_data[sender_id]["title"]
@@ -87,7 +87,7 @@ async def r(ctx, room_id = "-1"):
 		await ctx.message.delete()
 		
 @bot.command()
-async def t(ctx, room_id = "-1", title = "", max_user = 2, remain_time = 300):
+async def s_test(ctx, room_id = "-1", title = "", max_user = 2, remain_time = 300):
 	users_str = "{}".format(ctx.message.author.name)
 	if(ctx.message.author.nick != None):
 		users_str = "{}".format(ctx.message.author.nick)
