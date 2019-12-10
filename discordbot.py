@@ -18,8 +18,8 @@ cache_limit = 300
 @client.event
 async def on_message(message):	
 	if message.content.startswith("サブ垢"):
-	channel = client.get_channel(653957662609768458)
-        await channel.send("キーワード検知")
+		channel = client.get_channel(653957662609768458)
+        	await channel.send("キーワード検知")
 	
 	
     	
