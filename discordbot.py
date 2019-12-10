@@ -13,12 +13,13 @@ token = os.environ['DISCORD_BOT_TOKEN']
 recruit_message = {}
 lastest_recruit_data = {}
 cache_limit = 300
-CHANNEL_ID = 653957662609768458
 
 @client.event
-async def on_message(message):	
+async def on_message(message):
+	inform_channel = [channel for channel in client.get_all_channels() if channel.id == '653957662609768458'][0]
 	if message.content == 'test123':
-		channel = client.get_channel(CHANNEL_ID)
+		text="キーワード検知"
+		await client.send_message(inform_channel, text)
 		await channel.send('キーワード検知')
 @bot.event
 async def on_ready():
