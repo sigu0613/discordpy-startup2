@@ -37,11 +37,4 @@ async def logout():
 	global bot
 	await bot.close()
 
-loop = asyncio.get_event_loop()
-try:
-	loop.run_until_complete(asyncio.gather(startup(), disconnect_timer()))
-except KeyboardInterrupt:
-	loop.run_until_complete(logout())
-finally:
-	loop.close()
 bot.run(token)
