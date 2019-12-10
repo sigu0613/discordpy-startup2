@@ -18,8 +18,9 @@ inform_channel_id = "653957662609768458"
 @client.event
 async def on_message(message):	
 	if message.content.startswith("test"):
-		channel = client.get_channel()
-		await client.send_message(inform_channel_id, "キーワード検知")
+		CHANNEL_ID = 653957662609768458
+		channel = client.get_channel(CHANNEL_ID)
+		await channel.send('キーワード検知')
 @bot.event
 async def on_ready():
 	print('Logged in as')
