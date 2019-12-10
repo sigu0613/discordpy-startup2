@@ -10,9 +10,6 @@ client = discord.Client()
 
 
 token = os.environ['DISCORD_BOT_TOKEN']
-recruit_message = {}
-lastest_recruit_data = {}
-cache_limit = 300
 inform_id = 653957662609768458 
 
 @client.event
