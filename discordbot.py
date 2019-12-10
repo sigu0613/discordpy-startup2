@@ -23,6 +23,7 @@ async def on_message(message):
 			inform_channel = [channel for channel in client.get_all_channels() if channel.id == inform_id][0] 
 			await client.send_message(inform_channel, "キーワード検知")
 		else:
+
 @bot.event
 async def on_ready():
 	print('Logged in as')
