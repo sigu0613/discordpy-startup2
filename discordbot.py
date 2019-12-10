@@ -13,14 +13,16 @@ token = os.environ['DISCORD_BOT_TOKEN']
 recruit_message = {}
 lastest_recruit_data = {}
 cache_limit = 300
+text_id = {}
+inform_id = 653957662609768458 
 
 @client.event
 async def on_message(message):
-	inform_channel = [channel for channel in client.get_all_channels() if channel.id == '653957662609768458'][0]
 	if message.content == 'test123':
-		text="キーワード検知"
-		await client.send_message(inform_channel, text)
-		await channel.send('キーワード検知')
+		if message.channel.id == text_id:
+			inform_channel = [channel for channel in client.get_all_channels() if channel.id == inform_id][0] 
+			await client.send_message(inform_channel, "キーワード検知")
+		else:
 @bot.event
 async def on_ready():
 	print('Logged in as')
