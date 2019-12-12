@@ -14,9 +14,9 @@ inform_id = 653957662609768458
 
 @client.event
 async def on_message(message):
-	if message.content == "!delete":
-		await message.delete()
-		await message.channel.send( "削除しました" )
+	if message.content == "test123":
+		print(message.id) #メッセージのid
+		print(message.content) #メッセージのcontent 
 @bot.event
 async def on_ready():
 	print('Logged in as')
