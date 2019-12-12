@@ -15,8 +15,8 @@ inform_id = 653957662609768458
 @client.event
 async def on_message(message):
 	if message.content == 'test123':
-		inform_channel = [channel for channel in client.get_all_channels() if channel.id == inform_id][0] 
-		await imform_channel.send(content="キーワード")
+		inform_channel = client.get_channel(inform_id)
+		await imform_channel.send('キーワード')
 @bot.event
 async def on_ready():
 	print('Logged in as')
