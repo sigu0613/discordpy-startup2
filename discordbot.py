@@ -14,9 +14,8 @@ inform_id = 653957662609768458
 
 @client.event
 async def on_message(message):
-	if message.content == "test123":
-		print(message.id) #メッセージのid
-		print(message.content) #メッセージのcontent 
+	if message.content == '/neko1':
+		await message.channel.send('にゃーん')
 @bot.event
 async def on_ready():
 	print('Logged in as')
