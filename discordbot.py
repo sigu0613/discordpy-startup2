@@ -13,6 +13,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 @client.event
 async def on_message(message):
 	if message.content.startswith("test123"):
+		print('反応')
 		test = message.fetch_message(657753236606025729)
 		await message.channel.send(test)
 
