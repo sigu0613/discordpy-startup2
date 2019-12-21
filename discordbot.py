@@ -5,7 +5,7 @@ import traceback
 import asyncio
 import random
 
-bot = commands.Bot(command_prefix='.', description='キーワードを検知するとログchにメンションします')
+bot = commands.Bot(command_prefix='.', description='検索')
 client = discord.Client()
 
 
