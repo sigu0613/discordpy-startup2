@@ -10,11 +10,14 @@ bot = commands.Bot(command_prefix='.', description='検索')
 client = discord.Client()
 token = os.environ['DISCORD_BOT_TOKEN']
 
+messageId = 657753236606025729
+
+
 @client.event
 async def on_message(message):
-	if message.content.startswith("test123"):
+	if message.content.startswith('!test123'):
 		print('反応')
-		test = message.fetch_message(657753236606025729)
+		message = await client.get_channel.fetch_message(messageId)
 		await message.channel.send(test)
 
 @bot.event
