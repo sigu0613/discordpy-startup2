@@ -22,10 +22,10 @@ async def on_message(message):
 		count = 0
 		# 日本語で検索した上位5件を順番に表示
 		for url in search(kensaku, lang="jp",num = 2):
-		await message.channel.send(url)
-		count += 1
-		if(count == 2):
-			break
+			await message.channel.send(url)
+			count += 1
+			if(count == 2):
+				break
 	# google検索モードへの切り替え
 	if message.content == '!google':
 		ModeFlag = 1
